@@ -1,6 +1,7 @@
 :root {
   --bg-color: #f6f6f6;
   --text-color: black;
+  --footer-border-color: #00000035;
 
   /* 🎨 Theme Colors */
   --primary-color: #7209b7;
@@ -24,6 +25,7 @@
 [data-theme="dark"] {
   --bg-color: black;
   --text-color: #f6f6f6;
+  --footer-border-color: #f6f6f635;
 
   /* 🎨 Dark Theme Colors */
   --primary-color: #7209b7;

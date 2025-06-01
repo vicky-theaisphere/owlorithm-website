@@ -8,7 +8,7 @@ function Header() {
     <header className="header">
       <div>
         <NavLink to="/">
-          <img src={logo} alt="Owlorithm Logo" style={{ width: "20rem" }} />
+          <img src={logo} alt="Owlorithm Logo" style={{ width: "18rem" }} />
         </NavLink>
       </div>
       <nav className="nav-links">
