@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/footer.css";
 import lightLogo from "../assets/black-transparent.svg";
 import darkLogo from "../assets/white-transparent.svg";
 
 function Footer() {
+  const { t } = useTranslation();
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -27,41 +29,42 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-columns">
         <div className="footer-column">
-          <h3>Company</h3>
+          <h3>{t("footer_company")}</h3>
           <div className="footer-links">
-            <a href="/about">About Us</a>
-            <a href="/careers">Careers</a>
-            <a href="/blog">Blog</a>
-            <a href="/press">Press</a>
+            <a href="/about">{t("footer_about_us")}</a>
+            <a href="/careers">{t("footer_careers")}</a>
+            <a href="/blog">{t("footer_blog")}</a>
+            <a href="/press">{t("footer_press")}</a>
           </div>
         </div>
         <div className="footer-column">
-          <h3>Recruiters</h3>
+          <h3>{t("footer_business")}</h3>
           <div className="footer-links">
-            <a href="/post-job">Post a Job</a>
-            <a href="/search-resumes">Search Resumes</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/contact-sales">Contact Sales</a>
+            <a href="/post-job">{t("footer_post_job")}</a>
+            <a href="/search-resumes">{t("footer_search_resume")}</a>
+            <a href="/pricing">{t("footer_pricing")}</a>
+            <a href="/contact-sales">{t("footer_contact_sales")}</a>
           </div>
         </div>
         <div className="footer-column">
-          <h3>Professionals</h3>
+          <h3>{t("footer_profesional")}</h3>
           <div className="footer-links">
-            <a href="/find-jobs">Find Jobs</a>
-            <a href="/job-alerts">Job Alerts</a>
+            <a href="/find-jobs">{t("footer_find_jobs")}</a>
+            <a href="/job-alerts">{t("footer_job_alerts")}</a>
           </div>
         </div>
         <div className="footer-column">
-          <h3>Resources</h3>
+          <h3>{t("footer_resources")}</h3>
           <div className="footer-links">
-            <a href="/help-center">Help Center</a>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms-of-service">Terms of Service</a>
-            <a href="/newsletter">Newsletter</a>
+            <a href="/help-center">{t("footer_help")}</a>
+            <a href="/privacy-policy">{t("footer_privacy")}</a>
+            <a href="/terms-of-service">{t("footer_terms")}</a>
+            <a href="/cookie-policy">{t("footer_cookies")}</a>
+            <a href="/newsletter">{t("footer_newsletter")}</a>
           </div>
         </div>
         <div className="footer-column">
-          <h3>Connect</h3>
+          <h3>{t("footer_connect")}</h3>
           <div className="social-icons">
             <a
               href="https://linkedin.com/in/yourprofile"
@@ -115,7 +118,9 @@ function Footer() {
       </div>
 
       <div className="footer-bar">
-        <p>&copy; {new Date().getFullYear()} Owlorithm. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} {t("footer_copyright")}
+        </p>
       </div>
     </footer>
   );
