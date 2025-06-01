@@ -10,7 +10,7 @@
 }
 
 .theme-icon {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--text-color);
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -21,7 +21,7 @@
 
 /* 🌞 Sun icon hover = yellow */
 .theme-toggle:hover .sun-icon {
-  color: #facc15; /* Tailwind yellow-400 */
+  color: var(--warning-color);
 }
 
 /* 🌙 Moon icon hover = blue */
