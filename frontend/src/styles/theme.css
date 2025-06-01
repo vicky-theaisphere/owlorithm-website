@@ -6,10 +6,13 @@
   --primary-color: #7209b7;
   --secondary-color: #f72585;
   --accent-color: #4895ef;
-  /* --link-color: #7209b7;
-  --success-color: #f72585;
-  --warning-color: #4895ef;
-  --error-color: #4895ef; */
+  --link-color: #4895ef;
+  --success-color: #52b788;
+  --warning-color: #ffb700;
+  --error-color: #f25c54;
+  --success-bgcolor: #52b78835;
+  --warning-bgcolor: #ffb70035;
+  --error-bgcolor: #f25c5435;
 
   --hover-text-color: #f6f6f6; /* Define this for hover effects */
 
@@ -26,6 +29,13 @@
   --primary-color: #7209b7;
   --secondary-color: #f72585;
   --accent-color: #4895ef;
+  --link-color: #4895ef;
+  --success-color: #52b788;
+  --warning-color: #ffb700;
+  --error-color: #f25c54;
+  --success-bgcolor: #52b78835;
+  --warning-bgcolor: #ffb70035;
+  --error-bgcolor: #f25c5435;
 }
 
 body {
