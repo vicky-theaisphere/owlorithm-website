@@ -1,0 +1,62 @@
+.theme-toggle {
+  cursor: pointer;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.theme-icon {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: rotate(30deg);
+}
+
+/* 🌞 Sun icon hover = yellow */
+.theme-toggle:hover .sun-icon {
+  color: #facc15; /* Tailwind yellow-400 */
+}
+
+/* 🌙 Moon icon hover = blue */
+.theme-toggle:hover .moon-icon {
+  color: var(--accent-color);
+}
+
+.theme-toggle-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -175%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color);
+  border-radius: 0.4rem;
+  white-space: normal;
+  text-align: center;
+  font-size: 0.85rem;
+  max-width: 5rem;
+  word-wrap: break-word;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle-icon-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.theme-toggle-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}

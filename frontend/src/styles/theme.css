@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #f6f6f6;
+  --text-color: black;
+
+  /* 🎨 Theme Colors */
+  --primary-color: #7209b7;
+  --secondary-color: #f72585;
+  --accent-color: #4895ef;
+  /* --link-color: #7209b7;
+  --success-color: #f72585;
+  --warning-color: #4895ef;
+  --error-color: #4895ef; */
+
+  --hover-text-color: #f6f6f6; /* Define this for hover effects */
+
+  /* Other common values */
+  --border-radius: 0.5rem;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: #f6f6f6;
+
+  /* 🎨 Dark Theme Colors */
+  --primary-color: #7209b7;
+  --secondary-color: #f72585;
+  --accent-color: #4895ef;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
