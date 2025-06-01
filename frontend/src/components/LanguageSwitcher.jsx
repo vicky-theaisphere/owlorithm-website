@@ -11,8 +11,10 @@ const languages = [
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState(languages[0]); // fallback default
   const dropdownRef = useRef();
 
+  // Handle clicks outside dropdown
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -23,13 +25,18 @@ export default function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Update currentLang once i18n is initialized
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      const detected = languages.find((l) => i18n.language.startsWith(l.code));
+      setCurrentLang(detected || languages[0]);
+    }
+  }, [i18n.language, i18n.isInitialized]);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setOpen(false);
   };
-
-  const currentLang =
-    languages.find((l) => l.code === i18n.language) || languages[0];
 
   return (
     <div className="language-switcher" ref={dropdownRef}>
